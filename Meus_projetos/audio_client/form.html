@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+</head>
+<body>
+	<form action="http://localhost:8080/audio" method="post" enctype="multipart/form-data">
+		<label for="">Título</label><br>
+		<input type="text" name="title" placeholder="Título do album"><br>
+		<label for="">Música</label><br>
+		<input type="text" name="song" placeholder="Título do album"><br>
+		<label for="">Artista</label><br>
+		<input type="text" name="artist" placeholder="Título do album"><br>
+		<input type="file" name="upload" multiple="mutiple"><br>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

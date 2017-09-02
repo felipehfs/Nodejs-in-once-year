@@ -1,0 +1,17 @@
+{
+  "name": "audio_client",
+  "authors": [
+    "Felipe Henrique <felipehfsouza@gmail.com>"
+  ],
+  "description": "Um cliente de audioAPI",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

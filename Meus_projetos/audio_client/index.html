@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio Client</title>
+</head>
+<body>
+	<div id="result">
+		
+	</div>
+	<script>
+		var xhttp = new XMLHttpRequest();
+
+		xhttp.onreadystatechange = function () {
+			if(this.readyState === 4 && this.status === 200){
+				var lista = JSON.parse(this.responseText);
+				console.log(lista);
+
+				for(var i=0; i< lista.length; i++){
+					
+					var div = document.createElement('div');
+					var h1 = document.createElement('h1');
+					// Title Tag
+					var txtNode = document.createTextNode(lista[i].title);
+					h1.appendChild(txtNode);
+
+					// Audio Tag
+					var audio = document.createElement('audio');
+					audio.src = "http://localhost:8080/audio/" + lista[i].file;
+					audio.type = 'audio/mpeg';
+					audio.controls = 'controls';
+
+					div.appendChild(h1);
+					div.appendChild(audio);
+
+					document.getElementById('result').appendChild(div);
+				}
+				
+			}
+		}
+		xhttp.open('GET', 'http://localhost:8080/audio', true);
+		xhttp.setRequestHeader('Content-type', 'application/json');
+		xhttp.send();
+	</script>
+</body>
+</html>

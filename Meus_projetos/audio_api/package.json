@@ -1,0 +1,16 @@
+{
+  "name": "audio_api",
+  "version": "1.0.0",
+  "description": "A simple api for sounds ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Henrique",
+  "license": "ISC",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "formidable": "^1.1.1",
+    "fs-extra": "^4.0.1"
+  }
+}
