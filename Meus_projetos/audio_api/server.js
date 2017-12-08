@@ -11,7 +11,6 @@ app.use(function(req, res, next) {
 });
 
 app.post('/audio', function(req, res){
-    // TODO: O BodyParser nao funciona o jeito e pegar os campos pelo formidable
     let novoAudio = new Audio();
 
     var form = new formidable.IncomingForm();
