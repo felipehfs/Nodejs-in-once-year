@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "felipe henrique",
   "license": "ISC",
@@ -14,6 +16,8 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "express-validator": "^3.2.1",
-    "socket.io": "^2.0.3"
-  }
+    "socket.io": "^2.0.3",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
